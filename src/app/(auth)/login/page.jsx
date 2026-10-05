@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
+import MeshBackground from "../../../components/MeshBackground";
 
 export default function LoginPage() {
     const router = useRouter();
@@ -38,18 +39,16 @@ export default function LoginPage() {
 
     return (
         <main className="auth-page">
-            <div className="network-bg">
-                <span className="network-node node-1" />
-                <span className="network-node node-2" />
-                <span className="network-node node-3" />
-                <span className="network-node node-4" />
-                <span className="network-node node-5" />
-                <span className="network-line line-1" />
-                <span className="network-line line-2" />
-                <span className="network-line line-3" />
-            </div>
+            <MeshBackground />
 
             <section className="auth-wrapper">
+                <div className="auth-brand">
+                    <div className="brand-name">ResQNet</div>
+
+                    <div className="brand-subtitle">
+                        Emergency Response Platform
+                    </div>
+                </div>
 
                 <div className="auth-card">
                     <div className="auth-header">
@@ -58,7 +57,7 @@ export default function LoginPage() {
                         <h1>Welcome back</h1>
 
                         <p>
-                            Sign in to access the ResQNet dashboard.
+                            Sign in to access the ResQNet response dashboard.
                         </p>
                     </div>
 
@@ -78,9 +77,7 @@ export default function LoginPage() {
                         </div>
 
                         <div className="form-group">
-                            <div className="label-row">
-                                <label htmlFor="password">Password</label>
-                            </div>
+                            <label htmlFor="password">Password</label>
 
                             <input
                                 id="password"

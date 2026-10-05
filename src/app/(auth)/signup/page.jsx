@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
+import MeshBackground from "../../../components/MeshBackground";
 
 export default function SignupPage() {
     const router = useRouter();
@@ -53,19 +54,16 @@ export default function SignupPage() {
 
     return (
         <main className="auth-page">
-            <div className="network-bg">
-                <span className="network-node node-1" />
-                <span className="network-node node-2" />
-                <span className="network-node node-3" />
-                <span className="network-node node-4" />
-                <span className="network-node node-5" />
-                <span className="network-line line-1" />
-                <span className="network-line line-2" />
-                <span className="network-line line-3" />
-            </div>
+            <MeshBackground />
 
             <section className="auth-wrapper">
+                <div className="auth-brand">
+                    <div className="brand-name">ResQNet</div>
 
+                    <div className="brand-subtitle">
+                        Emergency Response Platform
+                    </div>
+                </div>
 
                 <div className="auth-card">
                     <div className="auth-header">
@@ -74,7 +72,8 @@ export default function SignupPage() {
                         <h1>Create account</h1>
 
                         <p>
-                            Set up an account to access the ResQNet dashboard.
+                            Create an account to access the ResQNet response
+                            dashboard.
                         </p>
                     </div>
 
